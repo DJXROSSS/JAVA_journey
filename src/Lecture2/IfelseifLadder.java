@@ -11,8 +11,7 @@ public class IfelseifLadder {
         System.out.println("Please enter your Age: ");
         int age = scan.nextInt();
         System.out.println("Please tell if you have an adhar card or not [Y/N]");
-        scan.nextLine();
-        String hasAdhar = scan.nextLine();
+        String hasAdhar = scan.next();
 
 //        if (age > 18) {
 //            System.out.println("18+");
