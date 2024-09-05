@@ -1,39 +1,43 @@
 package Lecture3.PatternPrinting;
-
-import kotlin.text.StringsKt;
-
-import java.awt.print.Printable;
-import java.util.Scanner;
-
 public class Sheet1 {
     public static void main(String[] args) {
 //        Scanner scan = new Scanner(System.in);
 //        int num = scan.nextInt();
-//        Q1(num);
-//        Q2(num);
-//        Q3(num);
-//        Q4(num);
-//        Q5(num);
-//        Q6(num);
-//        Q7(num);
-//        Q8(num);
-//        Q9(num);
-//        Q10(num);
-//        Q11(num);
-//        Q12(num);
-//        Q13(num);
-//        Q14(num);
-//        Q15(num);
-//        Q16(num);
-//        Q17(7);
-//        Q18(7);
-//        Q20(7);
-//        Q19(7);
-//        Q20(7);
-//        Q21(7);
-//        Q22(7);
-//        Q23(5);
+        int num = 5;
+        Q1(num);
+        Q2(num);
+        Q3(num);
+        Q4(num);
+        Q5(num);
+        Q6(num);
+        Q7(num);
+        Q8(num);
+        Q9(num);
+        Q10(num);
+        Q11(num);
+        Q12(num);
+        Q13(num);
+        Q14(num);
+        Q15(num);
+        Q16(num);
+        Q17(7);
+        Q18(7);
+        Q20(7);
+        Q19(7);
+        Q20(7);
+        Q21(7);
+        Q22(7);
+        Q23(5);
+        Q24(5);
         Q25(5);
+        Q26(5);
+        Q27(5);
+        Q28(5);
+        Q29(5);
+        Q30(5);
+        Q31(5);
+        Q32(5);
+        Q33(10);
     }
 
 
@@ -137,7 +141,7 @@ public class Sheet1 {
         }
     }
     public static void Q13(int n) {
-        int i, j;
+        int i;
         for (i = 0; i < n; i++) {
             System.out.println("*".repeat(i+1));
         }
@@ -258,5 +262,112 @@ public class Sheet1 {
             System.out.println();
         }
     }
+    public static void Q26(int n) {
+        int i,j;
+        for (i = 1; i <= n; i++) {
+            System.out.print(" ".repeat(n-i));
+            for (j = 1; j < i*2 ;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    public static void Q27(int n) {
+        int i, j;
+        for (i = 1; i <= n; i++) {
+            System.out.print(" ".repeat(n-i));
+            for (j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            for (j = i-1; j > 0; j--) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    public static void Q28(int n){
+        int i, j;
+        for (i = 1; i <= n; i++) {
+            System.out.print(" ".repeat(n-i));
+            for (j = i; j < 2*i; j++) {
+                System.out.print(j);
+            }
+            for (j = 2*i-2; j>=i; j--) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    public static void Q29(int n) {
+        int i;
+        System.out.println(" ".repeat(n-1)+1);
+        for (i=0; i<n-1;i++) {
+            System.out.println(" ".repeat(n-2-i)+Integer.toString(i+2)+"0".repeat(i*2+1)+(i+2));
+        }
+    }
+    public static void Q30(int n) {
+        int i,j;
+        for (i=1; i<=n;i++){
+            for (j = n; j > 0; j--) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+//        System.out.println("-----------------------------");
+    }
+    public static void Q31(int n) {
+        int i,j;
+        for (i=1; i<=n;i++){
+            for (j = n; j > 0; j--) {
+                if (i == j) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print(j+" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void Q32(int n) {
+        int i,j;
+        for (i = 1; i<=n;i++){
+            for (j =1; j<=i;j++){
+                if (j ==i){
+                    System.out.print(i);
+                } else {
+                    System.out.print(i+"*");
+                }
+            }
+            System.out.println();
+        }
+        for (i = n-1; i>0;i--){
+            for (j = i; j>0;j--){
+                if (j == 1){
+                    System.out.print(i);
+                } else {
+                    System.out.print(i+"*");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void Q33(int n){
+        int i,j;
+        System.out.println(" ".repeat(n-1)+0);
+        for (i = n-1; i>0;i--) {
+            for (j = 1; j<i;j++){
+                System.out.print(" ");
+            }
+            for (j = i; j<=n-1;j++){
+                System.out.print(j);
+            }
+            System.out.print(0);
+            for (j = n-1; j>=i;j--){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
 }
 
